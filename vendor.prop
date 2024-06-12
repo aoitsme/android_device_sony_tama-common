@@ -188,6 +188,7 @@ ro.vendor.extension_library=libqti-perfd-client.so
 persist.vendor.radio.enableadvancedscan=false
 
 # USB
+ro.usb.uvc.enabled=true
 vendor.usb.diag.func.name=diag
 vendor.usb.dpl.inst.name=dpl
 vendor.usb.qdss.inst.name=qdss
