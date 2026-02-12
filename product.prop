@@ -8,3 +8,6 @@ ro.lmk.log_stats=true
 
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
+
+# Incremental-fs
+ro.incremental.enable=yes
