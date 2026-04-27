@@ -359,6 +359,11 @@ PRODUCT_PACKAGES += \
     libsqlite.vendor:64 \
     libutilscallstack.vendor
 
+# Powerhal properties
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.iorapd.enable=false \
+    iorapd.perfetto.enable=false
+
 # QTI
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor
