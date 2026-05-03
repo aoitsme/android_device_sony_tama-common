@@ -20,6 +20,10 @@ endif
 
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
 
+# Disable Scudo
+PRODUCT_USE_SCUDO := false
+PRODUCT_DISABLE_SCUDO := true
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
