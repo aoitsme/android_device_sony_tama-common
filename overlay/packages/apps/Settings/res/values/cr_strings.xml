@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Android version screen, build maintainer -->
+    <string name="build_maintainer_summary">aoitsme</string>
+    <string name="build_maintainer_donate_url" translatable="false">https://saweria.co/Kanonify</string>
+</resources>
