@@ -26,6 +26,7 @@ ro.vendor.use_data_netmgrd=true
 # Graphics
 debug.sf.enable_hwc_vds=1
 debug.sf.latch_unsignaled=1
+debug.sf.disable_backpressure=1
 
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
