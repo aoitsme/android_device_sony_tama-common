@@ -39,3 +39,8 @@ ro.vendor.qti.va_aosp.support=1
 # Wireless display
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
+
+# LMKD
+ro.lmk.kill_heaviest_task=false
+ro.lmk.kill_timeout_ms=100
+ro.lmk.log_stats=true
