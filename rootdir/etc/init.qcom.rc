@@ -107,6 +107,8 @@ on fs
 
     restorecon /dev/block/platform/soc/1d84000.ufshc/by-name/TA
 
+    mount tmpfs tmpfs /metadata size=16m
+
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
