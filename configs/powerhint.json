@@ -42,6 +42,7 @@
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
+        "1996800",
         "1459200",
         "1286400",
         "1209600",
@@ -291,18 +292,6 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "CPUBigClusterMinFreq",
-      "Duration": 0,
-      "Value": "1209600"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CPULittleClusterMinFreq",
-      "Duration": 0,
-      "Value": "1132800"
-    },
-    {
-      "PowerHint": "INTERACTION",
       "Node": "CPUBWHystTriggerCount",
       "Duration": 0,
       "Value": "0"
@@ -465,15 +454,39 @@
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "GPUMinFreq",
+      "Node": "GPUForceClkOn",
       "Duration": 0,
-      "Value": "520000000"
+      "Value": "1"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "GPUMaxFreq",
+      "Node": "GPUForceRailOn",
       "Duration": 0,
-      "Value": "710000000"
+      "Value": "1"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUIdleTimer",
+      "Duration": 0,
+      "Value": "10000"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "1420800"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "1996800"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "GPUMinFreq",
+      "Duration": 0,
+      "Value": "520000000"
     }
   ]
 }
