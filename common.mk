@@ -455,6 +455,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal-service.qti
+
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch-service.tama
