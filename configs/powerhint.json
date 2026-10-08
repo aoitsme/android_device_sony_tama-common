@@ -108,15 +108,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "TASchedtuneBoost",
-      "Path": "/dev/stune/top-app/schedtune.boost",
-      "Values": [
-        "50",
-        "10"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "CPUBWHystTriggerCount",
       "Path": "/sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count",
       "Values": [
@@ -219,6 +210,24 @@
       "HoldFd": true
     },
     {
+      "Name": "TAUClampMin",
+      "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
+      "Values": [
+        "50",
+        "10"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "FGUClampMin",
+      "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
+      "Values": [
+        "20",
+        "10"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "SchedBoost",
       "Path": "/proc/sys/kernel/sched_boost",
       "Values": [
@@ -294,12 +303,6 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "TASchedtuneBoost",
-      "Duration": 0,
-      "Value": "50"
-    },
-    {
-      "PowerHint": "INTERACTION",
       "Node": "CPUBWHystTriggerCount",
       "Duration": 0,
       "Value": "0"
@@ -327,6 +330,18 @@
       "Node": "LLCCBWMinFreq",
       "Duration": 0,
       "Value": "2597"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "TAUClampMin",
+      "Duration": 0,
+      "Value": "50"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "FGUClampMin",
+      "Duration": 0,
+      "Value": "20"
     },
     {
       "PowerHint": "LAUNCH",

@@ -30,14 +30,6 @@ on early-init
     write /proc/sys/kernel/sched_boost 1
 
 on init
-    write /dev/stune/foreground/schedtune.sched_boost_no_override 1
-    write /dev/stune/top-app/schedtune.sched_boost_no_override 1
-    write /dev/stune/schedtune.colocate 0
-    write /dev/stune/background/schedtune.colocate 0
-    write /dev/stune/system-background/schedtune.colocate 0
-    write /dev/stune/foreground/schedtune.colocate 0
-    write /dev/stune/top-app/schedtune.colocate 1
-
     # Disable UFS powersaving
     write /sys/devices/platform/soc/${ro.boot.bootdevice}/clkgate_enable 0
     write /sys/devices/platform/soc/${ro.boot.bootdevice}/hibern8_on_idle_enable 0
@@ -75,10 +67,11 @@ on init
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/pl 0
     write /sys/devices/system/cpu/cpu4cpufreq/scaling_min_freq 825000
 
-    # Set default schedTune value for foreground/top-app
-    write /dev/stune/foreground/schedtune.prefer_idle 1
-    write /dev/stune/top-app/schedtune.boost 10
-    write /dev/stune/top-app/schedtune.prefer_idle 1
+    # Set default UClamp value
+    write /proc/sys/kernel/sched_util_clamp_min 128
+    write /proc/sys/kernel/sched_util_clamp_min_rt_default 96
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 1
 
 on boot
     # For cpusets initialize for Silver only first and then Silver + Gold
