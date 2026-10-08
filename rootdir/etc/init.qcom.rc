@@ -1372,7 +1372,6 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     # setting RLIMIT_RTPRIO allows binder RT priority inheritance
     rlimit rtprio 10 10
     ioprio rt 4
-    writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     onrestart restart audioserver
 
 # imsdatadaemon starts with root and UID will be downgraded to RADIO.
@@ -1539,7 +1538,6 @@ service vendor.somc.hardware.camera-provider-1-0 /vendor/bin/hw/vendor.somc.hard
     group camera audio input drmrpc oem_2993 oem_2996
     ioprio rt 4
     capabilities SYS_NICE
-    writepid /dev/cpuset/camera-daemon/tasks /dev/stune/top-app/tasks
     socket cammw_excal:ipc:9000 stream 0660 cameraserver camera
     socket cammw_excal:ipc:9001 stream 0660 cameraserver camera
 
