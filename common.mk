@@ -200,7 +200,9 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.recovery.qcom.rc \
+    init.tama.nfc.rc \
     init.target.rc \
+    libnfc-nci.conf \
     qns.fstab \
     sensor_json_transfer.sh \
     ueventd.qcom.rc
@@ -347,12 +349,6 @@ PRODUCT_PACKAGES += \
 # Secure Element
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0.vendor
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/init.tama.nfc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.tama.nfc.rc
 
 # Power
 PRODUCT_PACKAGES += \
