@@ -2,9 +2,20 @@
 ro.telephony.block_binder_thread_on_incoming_calls=false
 
 # LMKD
-ro.lmk.kill_heaviest_task=false
+ro.config.low_ram=false
+ro.lmk.use_minfree_levels=false
+ro.lmk.use_new_strategy=true
+ro.lmk.use_psi=true
+ro.lmk.psi_complete_stall_ms=700
+ro.lmk.psi_partial_stall_ms=70
+ro.lmk.stall_limit_critical=40
+ro.lmk.swap_free_low_percentage=10
+ro.lmk.thrashing_limit=100
+ro.lmk.lowmem_min_oom_score=950
+ro.lmk.filecache_min_kb=153600
+ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=100
-ro.lmk.log_stats=true
+ro.lmk.log_stats=false
 
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
