@@ -11,3 +11,6 @@ persist.sys.fuse.passthrough.enable=true
 
 # Incremental-fs
 ro.incremental.enable=yes
+
+# Apk verity
+ro.apk_verity.mode=2
