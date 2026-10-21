@@ -23,6 +23,11 @@ $(call inherit-product, vendor/lunaris/dolby/dolby.mk)
 
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
+# Axion flags
+TARGET_SUPPORTS_KERNEL_MANAGER := true
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/ax_kernel_manager.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/ax_kernel_manager.xml \
+    $(LOCAL_PATH)/configs/ax_perf_thermal.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/ax_perf_thermal.xml \
 # Disable ART debug
 ART_BUILD_TARGET_NDEBUG := true
 ART_BUILD_TARGET_DEBUG := false
@@ -206,8 +211,10 @@ PRODUCT_COPY_FILES += \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
+    ax_init_sdm845.rc \
     fstab.qcom \
     idd.fstab \
+    init.axion.rc \
     init.class_main.sh \
     init.msm.usb.configfs.rc \
     init.qcom.early_boot.sh \
