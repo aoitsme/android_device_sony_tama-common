@@ -24,7 +24,8 @@ genfscon sysfs /devices/platform/soc/a88000.i2c/i2c-0/0-0061/power_supply/wirele
 
 genfscon sysfs /devices/virtual/switch/lid/state                u:object_r:sysfs_switch_lid:s0
 
-genfscon proc /sys/kernel/sched_autogroup_enabled               u:object_r:proc_sched:s0
+genfscon proc /sys/vm/vfs_cache_pressure                        u:object_r:proc_drop_caches:s0
+genfscon proc /sys/kernel/sched_migration_cost_ns               u:object_r:proc_sched:s0
 genfscon debugfs /sched_features                                u:object_r:debugfs_sched_features:s0
 genfscon proc /sys/kernel/sched_boost                           u:object_r:proc_sched:s0
 genfscon debugfs /wlan0                                         u:object_r:debugfs_wlan:s0
@@ -39,3 +40,9 @@ genfscon sysfs /devices/platform/soc/17300000.qcom,lpass/subsys4/restart_level u
 genfscon sysfs /devices/platform/soc/5c00000.qcom,ssc/subsys5/restart_level    u:object_r:sysfs_ssr_toggle:s0
 genfscon sysfs /devices/platform/soc/8300000.qcom,turing/subsys6/restart_level u:object_r:sysfs_ssr_toggle:s0
 genfscon sysfs /devices/platform/soc/4080000.qcom,mss/subsys7/restart_level    u:object_r:sysfs_ssr_toggle:s0
+
+# Gpu
+genfscon sysfs /class/kgsl/kgsl-3d0/devfreq/available_frequencies u:object_r:sysfs_gpu:s0
+genfscon sysfs /class/kgsl/kgsl-3d0/devfreq/min_freq u:object_r:sysfs_gpu:s0
+genfscon sysfs /class/kgsl/kgsl-3d0/max_gpuclk u:object_r:vendor_sysfs_kgsl_max_gpuclk:s0
+genfscon sysfs /devices/platform/soc/3d00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk u:object_r:vendor_sysfs_kgsl_max_gpuclk:s0
