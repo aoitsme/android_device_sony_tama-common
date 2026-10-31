@@ -120,6 +120,13 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
+# Setup lunaris dolby
+include vendor/lunaris/dolby/BoardConfigDolby.mk
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    vendor/lunaris/dolby/vintf/dolby_framework_compatibility_matrix.xml
+DEVICE_MANIFEST_FILE += \
+    vendor/lunaris/dolby/vintf/dolby_manifest.xml
+
 # LMKD
 TARGET_LMKD_STATS_LOG := true
 
