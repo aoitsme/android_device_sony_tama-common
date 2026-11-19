@@ -252,7 +252,7 @@ on enable-low-power
     write /sys/devices/platform/soc/${ro.boot.bootdevice}/hibern8_on_idle_enable 1
 
     write /proc/sys/vm/swappiness 100
-    write /proc/sys/vm/watermark_scale_factor 120
+    write /proc/sys/vm/watermark_scale_factor 20
 
     # Set LMK minfree
     write /sys/module/lowmemorykiller/parameters/minfree "18432,23040,27648,32256,85296,120640"
