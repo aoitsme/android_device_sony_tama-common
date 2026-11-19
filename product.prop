@@ -1,2 +1,9 @@
 # RIL
 ro.telephony.block_binder_thread_on_incoming_calls=false
+
+# LMKD
+ro.lmk.use_minfree_levels=false
+ro.lmk.use_new_strategy=true
+ro.lmk.use_psi=true
+ro.lmk.swap_free_low_percentage=5
+ro.lmk.kill_heaviest_task=true
