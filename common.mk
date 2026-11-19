@@ -216,8 +216,7 @@ PRODUCT_PACKAGES += \
     libnfc-nci.conf \
     qns.fstab \
     sensor_json_transfer.sh \
-    ueventd.qcom.rc \
-    ueventd.tama.rc
+    ueventd.qcom.rc
 
 # Configstore
 PRODUCT_PACKAGES += \
