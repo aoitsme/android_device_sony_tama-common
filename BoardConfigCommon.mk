@@ -84,6 +84,9 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 MALLOC_SVELTE := true
 MALLOC_LOW_MEMORY := true
 
+# Quick Tap
+TARGET_SUPPORTS_QUICK_TAP := true
+
 # Dalvik
 TARGET_HAS_6GB_RAM ?= false
 
